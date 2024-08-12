@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background-color: #d4dbe2;
+  width: 100%;
+  line-height: 1;
+}
+
+.container .accordion {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  padding: 24px;
+  color: #ced4da;
+  background-color: #fff;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  row-gap: 32px;
+  column-gap: 24px;
+}
+.number,
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.title:hover {
+  transition: all 0.2s ease-in-out;
+  color: #212529;
+  cursor: default;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  stroke: #495057;
+}
+.hidden-box {
+  grid-column: 2;
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.hidden-box ul {
+  color: #868e96;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  line-height: 1.6;
+}
+
+/* interactive class */
+.container .accordion .open {
+  color: #212529;
+  border-top: 6px solid #087f5b;
+  transition: all 0.2s ease-in-out;
+}
+
+.container .accordion .open .hidden-box {
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
